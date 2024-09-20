@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+ 
+    <body>
+        <h1>Ejemplo de git</h1>
+        <h2>Esto es desde la feature</h2>
+ 
+        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="logo" />
+ 
+        <a href="https://github.com/juanperezunilibre" target="_blank">Visita mi pagina en github</a>
+ 
+ 
+        <ul id="characters"></ul>
+       
+ 
+        <ol>
+            <li>Clonar repo</li>
+            <li>Crear rama</li>
+            <li>Hacer codigo nuevo</li>
+            <li>Subir al repo</li>
+        </ol>
+ 
+        <dl>
+            <dt>Que es git?</dt>
+            <dd>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, minus ullam amet libero eligendi beatae atque debitis. Quasi at ab quae doloribus, nulla voluptatem fugiat, obcaecati facilis reprehenderit a facere!
+            </dd>
+        </dl>
+ 
+ 
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Activo</td>
+                </tr>
+            </tbody>
+        </table>
+ 
+   
+        <script>
+            let lista = document.querySelector("#characters")
+ 
+            fetch("https://rickandmortyapi.com/api/character").then(res => res.json())
+            .then(data => {
+                let contenidoLista = []
+                data.results.map(character => {
+                    let li = document.createElement("li")
+ 
+                    li.innerHTML = character.name
+                    lista.appendChild(li)
+                })
+            })
+ 
+        </script>
+   
+    </body>
+ 
+ 
+ 
+</html>
